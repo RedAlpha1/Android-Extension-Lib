@@ -21,26 +21,31 @@ AndroidUtils is a collection of static utility methods that cover various aspect
 
 ## Installation
 
-### Gradle
+### Step 1. Add JitPack repository
 
-Add the following to your project's build.gradle file:
+Add it in your root settings.gradle at the end of repositories:
 
 ```gradle
-dependencies {
-    implementation 'com.example:androidutils:1.0.0'
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
 }
 ```
 
-### Maven
+### Step 2. Add the dependency
 
-```xml
-<dependency>
-  <groupId>com.example</groupId>
-  <artifactId>androidutils</artifactId>
-  <version>1.0.0</version>
-  <type>aar</type>
-</dependency>
+Add the following to your app's build.gradle file:
+
+```gradle
+dependencies {
+    implementation 'com.github.RedAlpha1:Android-Extension-Lib:Tag'
+}
 ```
+
+> Note: Replace 'Tag' with the actual release version (e.g., 'v1.0.0').
 
 ## Usage
 
@@ -212,13 +217,13 @@ AndroidUtils.openGoogleMaps(context, 37.7749, -122.4194, "San Francisco");
 
 ## Requirements
 
-- Android API level 16 or higher
+- Android API level 24 or higher
 - AndroidX
 
 ## License
 
 ```
-Copyright (c) 2023 Your Name
+Copyright (c) 2025 Prakhar
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
